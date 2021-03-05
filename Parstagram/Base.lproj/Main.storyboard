@@ -106,6 +106,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="aef-nT-jyC">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="insta_camera_btn" id="bZd-fP-Kmy">
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <segue destination="fT5-Wd-6tC" kind="presentation" modalPresentationStyle="fullScreen" id="8nh-oY-Z2l"/>
                             </connections>
