@@ -21,4 +21,7 @@ The following **bonus** features are implemented:
 
 ## App Walkthrough GIF
 
-<img src="http://g.recordit.co/iElfxUldfP.gif" width="250" /><br>
+<p float="left">
+ <img src="http://g.recordit.co/iElfxUldfP.gif" width="250" />
+ <img src="http://g.recordit.co/ezX0TAxyaT.gif" width="250" />
+</p>
