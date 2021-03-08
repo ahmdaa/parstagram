@@ -13,10 +13,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
+    var numberOfPosts = 0
     var posts = [PFObject]()
+    
+    let refresh = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refresh.addTarget(self, action: #selector(getPosts), for: .valueChanged)
+        tableView.refreshControl = refresh
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -25,9 +31,33 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        getPosts()
+    }
+    
+    @objc func getPosts() {
+        numberOfPosts = 20
+        
         let query = PFQuery(className: "Posts")
         query.includeKey("author")
-        query.limit = 20
+        query.order(byAscending: "createdAt")
+        query.limit = numberOfPosts
+        
+        query.findObjectsInBackground { (posts, error) in
+            if posts != nil {
+                self.posts = posts!
+                self.tableView.reloadData()
+                self.refresh.endRefreshing()
+            }
+        }
+    }
+    
+    func getMorePosts() {
+        numberOfPosts = numberOfPosts + 20
+        
+        let query = PFQuery(className: "Posts")
+        query.includeKey("author")
+        query.order(byDescending: "createdAt")
+        query.limit = numberOfPosts
         
         query.findObjectsInBackground { (posts, error) in
             if posts != nil {
@@ -35,6 +65,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    @IBAction func onLogout(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,6 +92,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.photoView.af.setImage(withURL: url)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row + 1 == posts.count {
+            getMorePosts()
+        }
     }
 
 }

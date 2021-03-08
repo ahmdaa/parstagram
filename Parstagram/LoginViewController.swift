@@ -15,8 +15,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func onSignIn(_ sender: Any) {
@@ -26,6 +24,7 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsername(inBackground: user, password: pass) { (user, error) in
             if user != nil {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                self.passwordField.text = ""
             } else {
                 print("Error: \(error?.localizedDescription ?? "???")")
             }
@@ -40,6 +39,7 @@ class LoginViewController: UIViewController {
         user.signUpInBackground { (success, error) in
             if success {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                self.passwordField.text = ""
             } else {
                 print("Error: \(error?.localizedDescription ?? "???")")
             }
