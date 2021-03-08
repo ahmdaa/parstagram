@@ -85,11 +85,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.captionLabel.text = post["caption"] as? String
         
-        let imageFile = post["image"] as! PFFileObject
-        let urlString = imageFile.url!
-        let url = URL(string: urlString)!
+        if let imageFile = post["image"] as? PFFileObject {
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+            
+            cell.photoView.af.setImage(withURL: url)
+        }
         
-        cell.photoView.af.setImage(withURL: url)
         
         return cell
     }
