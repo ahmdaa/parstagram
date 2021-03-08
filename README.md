@@ -19,9 +19,6 @@ The following **bonus** features are implemented:
 - [x] User can pull to refresh. (1pt)
 - [x] User can load past posts infinitely. (2pts)
 
-## App GIF Walkthrough
+## App Walkthrough GIF
 
-<p float="left">
-  <img src="http://g.recordit.co/IaKBoy0lFn.gif" width="250" /> 
-  <img src="http://g.recordit.co/50Z50eBN3b.gif" width="250" />
-</p>
+<img src="http://g.recordit.co/50Z50eBN3b.gif" width="250" /><br>
