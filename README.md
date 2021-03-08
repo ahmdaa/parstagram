@@ -21,6 +21,8 @@ The following **bonus** features are implemented:
 
 ## App Walkthrough GIF
 
+Note: posts can be loaded infinitely, there just isn't that many posts to load.
+
 <p float="left">
  <img src="http://g.recordit.co/iElfxUldfP.gif" width="250" />
  <img src="http://g.recordit.co/ezX0TAxyaT.gif" width="250" />
