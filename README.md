@@ -19,11 +19,11 @@ The following **bonus** features are implemented:
 - [x] User can pull to refresh. (1pt)
 - [x] User can load past posts infinitely. (2pts)
 
-## App Walkthrough GIF
+## App Walkthrough GIFs
 
-Note: posts can be loaded infinitely, there just isn't that many posts to load.
+Note: observe scroll bar size change in first gif for infinite loading
 
 <p float="left">
- <img src="http://g.recordit.co/iElfxUldfP.gif" width="250" />
  <img src="http://g.recordit.co/ezX0TAxyaT.gif" width="250" />
+ <img src="http://g.recordit.co/yWEpTPCkwV.gif" width="250" />
 </p>
