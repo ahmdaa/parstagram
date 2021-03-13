@@ -21,7 +21,7 @@ The following **bonus** features are implemented:
 
 ## App Walkthrough GIFs
 
-Note: observe scroll bar size change in first gif for infinite loading
+Note: observe scroll bar size change in second gif for infinite loading if it's not clear.
 
 <p float="left">
  <img src="http://g.recordit.co/ezX0TAxyaT.gif" width="250" />
