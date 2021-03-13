@@ -25,5 +25,5 @@ Note: observe scroll bar size change in first gif for infinite loading
 
 <p float="left">
  <img src="http://g.recordit.co/ezX0TAxyaT.gif" width="250" />
- <img src="http://g.recordit.co/yWEpTPCkwV.gif" width="250" />
+ <img src="http://g.recordit.co/W4KxzRdSjk.gif" width="250" />
 </p>
