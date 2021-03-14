@@ -51,7 +51,7 @@ The following **bonus** features are implemented:
 Note: observe scroll bar size change in second gif for infinite loading if it's not clear.
 
 <p float="left">
+ <img src="http://g.recordit.co/MifaK9Hhn1.gif" width="200" />
  <img src="http://g.recordit.co/ezX0TAxyaT.gif" width="200" />
  <img src="http://g.recordit.co/xuEh0aRu4r.gif" width="200" />
- <img src="http://g.recordit.co/MifaK9Hhn1.gif" width="200" />
 </p>
