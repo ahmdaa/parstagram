@@ -25,7 +25,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = PFUser.current()?.username ?? ""
+        // self.title = PFUser.current()?.username ?? ""
         
         commentBar.inputTextView.placeholder = "Add a comment..."
         commentBar.sendButton.title = "Post"
