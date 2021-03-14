@@ -22,7 +22,7 @@ The following **bonus** features are implemented:
 
 <p float="left">
  <img src="http://g.recordit.co/MHWWfWurv4.gif" width="250" />
- <img src="http://g.recordit.co/xuEh0aRu4r.gif" width="250" />
+ <img src="http://g.recordit.co/p7KYVNelMj.gif" width="250" />
 </p>
 
 # Parstagram - Part I
