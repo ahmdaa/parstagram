@@ -48,7 +48,7 @@ The following **bonus** features are implemented:
 
 ## App Walkthrough GIFs
 
-Note: observe scroll bar size change in second gif for infinite loading if it's not clear.
+Note: observe scroll bar size change in third gif for infinite loading if it's not clear.
 
 <p float="left">
  <img src="http://g.recordit.co/MifaK9Hhn1.gif" width="200" />
