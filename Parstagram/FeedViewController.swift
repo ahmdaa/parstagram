@@ -164,6 +164,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 cell.photoView.af.setImage(withURL: url)
             }
             
+            if let imageFile = user["profileImage"] as? PFFileObject {
+                let urlString = imageFile.url!
+                let url = URL(string: urlString)!
+                
+                cell.userImageView.af.setImage(withURL: url)
+            }
+            
             return cell
         } else if indexPath.row <= comments.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
@@ -176,6 +183,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             let user = comment["author"] as! PFUser
             cell.nameLabel.text = user.username
+            
+            if let imageFile = user["profileImage"] as? PFFileObject {
+                let urlString = imageFile.url!
+                let url = URL(string: urlString)!
+                
+                cell.userImageView.af.setImage(withURL: url)
+            }
             
             return cell
         } else {
